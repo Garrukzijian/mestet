@@ -1,0 +1,87 @@
+<!--pages/me/me.wxml-->
+<scroll-view scroll-y="true" style="height: 100vh;" bindscrolltoupper="scrollTo">
+
+
+  <view class="notlogin-content" wx:if="{{!login}}">
+    <view class="notlogin">
+      <button class="notlogin-btn" bindtap="toLogin" open-type="getUserInfo">微信一键登录</button>
+    </view>
+  </view>
+
+  <view class="login" wx:else>
+    <view class="info">
+      <image src="{{avatarUrl}}" class="avatarUrl" />
+      <text class="nickName">{{nickName}}</text>
+    </view>
+  </view>
+
+  <view class="wo-body">
+    <view class="wo-list">
+      <view class="wo" wx:for="{{woList}}" wx:key="index" data-page="{{item.page}}" bindtap="toDetail">
+        <view class="wo-left">
+          <image class="wo-left-iamge" src="{{item.url}}" mode="" />
+          <text class="wo-left-text">{{item.text}}</text>
+        </view>
+        <view class="wo-right">
+          <image class="wo-right-image" src="../../pages/images/dayuhao.png" mode="" />
+        </view>
+      </view>
+      <view class="wo" bindtap="my_address">
+        <view class="wo-left">
+          <image src="../../pages/images/分类.png" mode="" class="wo-left-iamge">
+          </image>
+          <text class="wo-left-text">常用功能</text>
+        </view>
+        <view class="wo-right">
+          <image src="../../pages/images/dayuhao.png" mode="" class="wo-right-image"></image>
+        </view>
+      </view>
+      <view class="wo" bindtap="toDetail">
+        <view class="wo-left">
+          <image src="../../pages/images/小程序.png" mode="" class="wo-left-iamge">
+
+          </image>
+          <text class="wo-left-text">小程序</text>
+        </view>
+
+        <view class="wo-right">
+          <image src="../../pages/images/dayuhao.png" mode="" class="wo-right-image"></image>
+        </view>
+      </view>
+      <view class="wo" bindtap="show_login_case">
+        <view class="cart">
+          <text class="one"> 双十一狂欢 赢会员免单</text>
+
+        </view>
+      </view>
+      <view class="my" bindtap="show_login_case">
+        <view class="cart">
+          <text class="one">123</text>
+        </view>
+      </view>
+    </view>
+  </view>
+  <!-- 登录弹窗 -->
+
+
+  <view>
+    <van-popup position="bottom" round closeable custom-style="height:60%;width:100%" show="{{ show_login }}" bind:close="close_login_case">
+      <view class="col_start paddingT">
+        <view class="col_center" style="height: 100rpx;">
+          <text>登录</text>
+        </view>
+        <view class="row_start" style="width: 80%; margin-top: 70rpx">
+          <van-icon name="manager" />
+          <input type="text" placeholder="请输入用户名" style="margin-left: 30rpx;" data-name="username" bind:input="input_msg" />
+        </view>
+
+        <view class="row_start" style="width: 80%; margin-top: 80rpx">
+          <van-icon name="lock" />
+          <input type="password" placeholder="请输入密码" style="margin-left: 30rpx;" data-name="password" bind:input="input_msg" />
+        </view>
+        <van-divider style="width: 100%;" />
+        <button style="background-color: #fcd667; color: white; width: 60%;margin-top: 60rpx;" bind:tap="login_admin" disabled="{{is_login? 'true':''}}">登录</button>
+      </view>
+    </van-popup>
+  </view>
+</scroll-view>
