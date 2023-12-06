@@ -1,0 +1,61 @@
+<!-- 评论-回复-回复评论显示区域 -->
+<view class="container">
+  <!-- 总共评论数 -->
+  <view class="total">所有评论</view>
+ 
+  <!-- END -->
+  <!-- 评论框 -->
+  <!-- <input confirm-type="send" class="container_inp" value="{{value}}" placeholder="{{ placeholder2 }}" placeholder-class="container_place" bindconfirm="bindconfirm"></input>     -->
+  <!-- END -->
+  <!-- 用户评论回复显示区域 -->
+  <view class="container-item" wx:for="{{commentList}}" wx:for-item="item" wx:key="index">
+    <image class="item_img" src="{{item.headImage}}" data-index="{{index}}" bindtap='replyComment'></image>
+    <view class="item_right">
+      <view class="right_name overFlowHide" data-index="{{index}}" bindtap='replyComment'>{{item.name}}</view>
+      <view class="right_content">
+        <text class="right_content_txt" bindtap='replyComment' data-index="{{index}}" data-name='{{list.comment_user_name}}' data-cid='{{list.comment_id}}' data-pid="{{list.parent_id}}">{{item.replyContent}}</text>
+        <text class="right_content_txt2" bindtap='replyComment' data-index="{{index}}">{{item.replyTime}}</text>
+        <!-- 回复评论 -->
+        <view class="reply" wx:for="{{item.replyList}}" wx:for-item="items" wx:key="indexs">
+          <image class="reply_img" src="{{items.headImage}}"></image>
+          <view class="reply_right">
+            <view class="right_name">{{items.name}}</view>
+            <!-- <text wx:if="{{list2.reply_name == ''}}" class="right_content_txt" bindtap='replyComment' data-type="2" data-name='{{list2.comment_user_name}}' data-cid='{{list2.comment_id}}' data-pid="{{list2.parent_id}}">{{list2.comment_text}}</text> -->
+            <text wx:if="{{list2.reply_name != ''}}" data-type="2" data-name='{{list2.comment_user_name}}' data-cid='{{list2.comment_id}}' data-pid="{{list2.parent_id}}" class="right_content_txt">回复 <text class="right_name">{{item.name}}：</text>{{items.replyContent}}</text>
+            <text class="right_content_txt2">{{items.replyTime}}</text>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+
+
+
+
+  <!-- END -->
+  <!-- 下拉结束 -->
+  <!-- <view class="end" wx:if="comment_list.length == 0">
+      <text class="end_txt" space="nbsp">—  THE arts END  —{{comment_list.length}}</text>    
+    </view>     -->
+  <!-- END -->
+
+  <!-- 没有评论的时候 -->
+  <view class="end">
+    <text class="end_txt" space="nbsp" wx:if="{{showNone}}">— 暂时没有评论 —</text>
+    <text class="end_txt" space="nbsp" wx:if="{{showAll}}">— 已经啦到底啦 —</text>
+
+  </view>
+  <!-- END -->
+</view>
+<!-- END -->
+<!-- 底部评论 -->
+<view class="foot">
+  <view class="say">
+    <view class="flex">
+      <image class="say_img" src="../images/comment.png"></image>
+      <input confirm-type="send" placeholder-style="font-size:28rpx" class="say_inp" placeholder="{{ placeholder }}" value="{{comment_text}}" bindchange="inputGetValue"></input>
+    </view>
+  </view>
+  <view class="replyBtn" bindtap='sendBtn'>发送</view>
+  
+</view>

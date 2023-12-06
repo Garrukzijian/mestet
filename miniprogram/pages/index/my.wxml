@@ -12,48 +12,52 @@
     <view class="info">
       <image src="{{avatarUrl}}" class="avatarUrl" />
       <text class="nickName">{{nickName}}</text>
+      <text class='vip' wx:if="{{isVip}}">vip用户</text>
     </view>
   </view>
 
-  <view class="wo-body">
+  <view class="wo-body" wx:if="{{isLogin}}">
     <view class="wo-list">
-      <view class="wo" wx:for="{{woList}}" wx:key="index" data-page="{{item.page}}" bindtap="toDetail">
+      <view class="wo" wx:for="{{ woList}}" wx:key="index" data-page="{{item.page}}" bindtap="toDetail">
         <view class="wo-left">
           <image class="wo-left-iamge" src="{{item.url}}" mode="" />
           <text class="wo-left-text">{{item.text}}</text>
         </view>
-        <view class="wo-right">
-          <image class="wo-right-image" src="../../pages/images/dayuhao.png" mode="" />
-        </view>
+
       </view>
+
       <view class="wo" bindtap="my_address">
         <view class="wo-left">
           <image src="../../pages/images/分类.png" mode="" class="wo-left-iamge">
           </image>
-          <text class="wo-left-text">常用功能</text>
+          <text class="wo-left-text" bindtap="xiaochengxu">常用功能</text>
         </view>
-        <view class="wo-right">
-          <image src="../../pages/images/dayuhao.png" mode="" class="wo-right-image"></image>
-        </view>
-      </view>
-      <view class="wo" bindtap="toDetail">
-        <view class="wo-left">
-          <image src="../../pages/images/小程序.png" mode="" class="wo-left-iamge">
 
-          </image>
+      </view>
+
+      <navigator class="wo" url="../applet/applet">
+        <view class="wo-left">
+          <image src="../../pages/images/小程序.png" mode="" class="wo-left-iamge"></image>
           <text class="wo-left-text">小程序</text>
         </view>
+      </navigator>
 
-        <view class="wo-right">
-          <image src="../../pages/images/dayuhao.png" mode="" class="wo-right-image"></image>
+      <navigator class="wo" url="../comment/comment">
+        <view class="wo-left">
+          <image src="../../pages/images/comment.png" mode="" class="wo-left-iamge"></image>
+          <text class="wo-left-text">个人评论</text>
         </view>
-      </view>
-      <view class="wo" bindtap="show_login_case">
-        <view class="cart">
-          <text class="one"> 双十一狂欢 赢会员免单</text>
+      </navigator>
 
+      <navigator class="wo" url="../vip/vip" wx:if="{{!isVip}}">
+        <view bindtap="show_login_case">
+          <view class="cart">
+            <text class="one"> 双十一狂欢 赢会员免单</text>
+          </view>
         </view>
-      </view>
+      </navigator>
+
+
       <view class="my" bindtap="show_login_case">
         <view class="cart">
           <text class="one">123</text>

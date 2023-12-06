@@ -1,14 +1,17 @@
 {
   "pages": [
-    "pages/index/index"
-
+    "pages/index/index",
+    "pages/comment/comment",
+    "pages/applet/applet",
+    "pages/vip/vip"
   ],
+  "cloud": true,
   "sitemapLocation": "sitemap.json",
   "window": {
-    "navigationBarBackgroundColor": "#2cc4cf",
-    "navigationBarTextStyle": "black",
-    "navigationBarTitleText": "雷欧音乐",
+    "navigationBarBackgroundColor": "#000000",
     "backgroundColor": "#eeeeee",
+    "navigationBarTextStyle": "white",
+    "navigationBarTitleText": "雷欧音乐",
     "backgroundTextStyle": "light",
     "enablePullDownRefresh": true
   }

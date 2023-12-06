@@ -1,14 +1,13 @@
 <scroll-view class="content-info" scroll-y>
-  <view class="playlist-item" wx:for="{{playlist}}" wx:key="id"
-  bindtap="onClick" data-id="{{item._id}}" >  
+  <view class="playlist-item" wx:for="{{playlist}}" wx:key="index"
+  bindtap="onClick" data-index="{{index}}" data-id="{{item._id}}" >  
   <image class="playlist-cover" src="{{item.img}}"/>
   <view class="playlist-info">
     <view class="playlist-info-title">{{item.title}}</view>
     <view class="playlist-info-singer">{{item.singer}}</view>
   </view>
-
   <view class="playlist-controls">
-    <text wx:if="{{index==playIndex}}">正在播放</text>
+    <text wx:if="{{index==playIndex}}" style="padding: 20px;">正在播放</text>
   </view>
   </view>
 </scroll-view>

@@ -1,0 +1,209 @@
+page {
+  background: #0e0d0d;
+  height: 100%;
+}
+
+.userCard {
+  background-color: rgb(28, 28, 28);
+  border-radius: 40rpx;
+  margin-left: 30rpx;
+  margin-right: 30rpx;
+  height: 360rpx;
+  margin-top: 20rpx;
+}
+
+.info {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.avatar {
+  border-radius: 200px;
+  width: 100rpx;
+  height: 100rpx;
+  margin-left: 20rpx;
+  margin-top: 20rpx;
+}
+
+.vipText {
+  margin-top: 20rpx;
+  margin-left: 20rpx;
+  color: #e0b495;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  height: 100rpx;
+}
+
+.nickName {
+  font-weight: 600;
+}
+
+.name {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+}
+
+.vipImage {
+  margin-left: 5rpx;
+  width: 50rpx;
+  height: 50rpx;
+}
+
+.vip {
+  font-size: 20rpx;
+  letter-spacing: 1px;
+}
+
+.vipList {
+  margin-top: 10rpx;
+  margin-left: 30rpx;
+  margin-right: 10rpx;
+  width: 60%;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  font-size: 22rpx;
+  color: #e0b495;
+}
+
+.vipList-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100rpx;
+}
+
+.logo {
+  width: 200rpx;
+  height: 200rpx;
+  margin-left: 40rpx;
+}
+
+.number {
+  font-weight: bold;
+  font-size: 30rpx;
+}
+
+.openvip {
+  width: 250rpx;
+  height: 100rpx;
+  margin-right: 15rpx;
+}
+
+.container-list {
+  display: flex;
+  margin-top: 20rpx;
+  justify-content: center;
+
+}
+
+/* 废弃 */
+.hold-text {
+  margin-top: 50rpx;
+  margin-left: 15rpx;
+}
+
+.pic1 {
+  width: 750rpx;
+  height: 400rpx;
+  margin: 0 auto;
+}
+
+.detail {
+  color: #8f8b8b;
+  margin-left: 38rpx;
+  font-size: 28rpx;
+  position: relative;
+  top: -30rpx;
+  display: inline;
+}
+
+.detail2 {
+  color: #8f8b8b;
+  font-size: 28rpx;
+  position: relative;
+  top: -30rpx;
+  display: inline;
+}
+
+.megaText {
+  color: orange;
+  font-size: 40rpx;
+  top: -30rpx;
+  position: relative;
+  font-weight: bold;
+}
+
+/* wxss文件 */
+.container3 {
+  column-count: 2;
+  column-gap: 5rpx;
+  padding: 5rpx;
+}
+
+.list-item {
+  break-inside: avoid;
+  display: flex;
+  flex-direction: column;
+  margin-left: 25rpx;
+  margin-right: 25rpx;
+}
+
+.column {
+  flex: 1;
+}
+
+.image {
+  overflow: auto;
+  margin-top: 15rpx;
+  width: 100%;
+}
+
+.dialog-mask {
+  background-color: rgba(0, 0, 0, 0.5);
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 999;
+}
+
+.dialog-container {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #fff;
+  padding: 20rpx;
+  height: 300rpx;
+  box-shadow: 0 -2rpx 4rpx rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.dialog-title {
+  font-size: 32rpx;
+  font-weight: bold;
+  margin-bottom: 20rpx;
+}
+
+.dialog-btn {
+  width: 400rpx;
+  height: 40rpx;
+  margin-top: 40rpx;
+  background-color: #4c83ff;
+  color: #fff;
+  border-radius: 4rpx;
+  font-size: 16rpx;
+  line-height: 40rpx;
+  text-align: center;
+  cursor: pointer;
+}

@@ -4,10 +4,12 @@
   <view class="tab-item {{tab==1?'active':''}}" bindtap="changeItem" data-item="1">播放器</view>
   <view class="tab-item {{tab==2?'active':''}}" bindtap="changeItem" data-item="2">播放列表</view>
   <view class="tab-item {{tab==3?'active':''}}" bindtap="changeItem" data-item="3">我的</view>
-
 </view>
 
 <!--内容滚动区域-->
+<view class="player-cover">
+<image src="../images/beijing.jpg" mode="aspectFill" style="height: 1000rpx;"/>
+</view>
 <view class="content">
   <swiper current="{{item}}" bindchange="changeTab">
     <swiper-item>
@@ -26,12 +28,13 @@
 </view>
 
 <!--底部播放器-->
-<view class="player" wx:for="{{playlist}}" wx:key="id" data-id="{{item._id}}">
-  <image class="player-cover" src="{{item.img}}"/>
+<view class="player">
+  <image class="player-cover" src="{{play.img}}"/>
   <view class="player-info">
-    <view class="player-info-title">{{tiem.title}}</view>
-    <view class="player-info-singer">{{item.singer}}</view>
-  </view>
+    <view class="player-info-title">{{play.title}}</view>
+    <view class="player-info-singer">{{play.singer}}</view>
+  </view>` 
+  <view class=""></view>
   <view class="player-controls">
     <!--切换到播放列表-->
     <image src="/pages/images/mm.jpg" bindtap="changePage" data-page="2"/>

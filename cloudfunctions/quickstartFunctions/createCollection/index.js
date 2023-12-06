@@ -10,16 +10,16 @@ const db = cloud.database();
 exports.main = async (event, context) => {
   try {
     // 创建集合
-    await db.createCollection('sales');
-    await db.collection('sales').add({
+    await db.createCollection('User');
+    await db.collection('User').add({
       // data 字段表示需新增的 JSON 数据
       data: {
         region: '华东',
         city: '上海',
-        sales: 11
+        sales: 11 
       }
     });
-    await db.collection('sales').add({
+    await db.collection('User').add({
       // data 字段表示需新增的 JSON 数据
       data: {
         region: '华东',
@@ -27,7 +27,7 @@ exports.main = async (event, context) => {
         sales: 11
       }
     });
-    await db.collection('sales').add({
+    await db.collection('User').add({
       // data 字段表示需新增的 JSON 数据
       data: {
         region: '华南',
@@ -35,7 +35,7 @@ exports.main = async (event, context) => {
         sales: 22
       }
     });
-    await db.collection('sales').add({
+    await db.collection('User').add({
       // data 字段表示需新增的 JSON 数据
       data: {
         region: '华南',

@@ -1,0 +1,83 @@
+<view class="container">
+
+  <view class='userCard'>
+    <view class='info'>
+      <image class='avatar' src="{{avatarUrl}}" mode="scaleToFill" />
+      <view class='vipText'>
+        <view class='name'>
+          <view class="nickName">{{nickName}}</view>
+          <image class='vipImage' src="../images/vip1.png" mode="scaleToFill"></image>
+        </view>
+        <view class="vip" wx:if="{{!vip}}">您还未开通超级vip</view>
+      </view>
+      <view>
+        <image class="logo" src="../images/logo1.png" mode="scaleToFill" />
+      </view>
+    </view>
+    <view class='container-list'>
+      <view class="vipList">
+        <view class="vipList-item">
+          <view class='number'>{{download}}</view>
+          <view>本月下载</view>
+        </view>
+        <view class="vipList-item">
+          <view class='number'>{{card}}</view>
+          <view>我的卡券</view>
+        </view>
+        <view class="vipList-item">
+          <view class='number'>{{day}}</view>
+          <view>加速天数</view>
+        </view>
+        <view class="vipList-item">
+          <view class='number'>{{score}}</view>
+          <view>我的积分</view>
+        </view>
+      </view>
+      <image class="openvip" src="../images/openvip.png" mode="scaleToFill" bindtap="showPaymentDialog" />
+    </view>
+  </view>
+  <!-- 弹窗 -->
+  <view class="dialog-mask" wx:if="{{showDialog}}"></view>
+  <view class="dialog-container" wx:if="{{showDialog}}">
+    <text class="dialog-title">确认付款</text>
+    <text>付款金额：15元</text>
+    <button class="dialog-btn" bindtap="confirmPayment">付款</button>
+    <button class="dialog-btn" bindtap="cancelPayment">取消</button>
+  </view>
+  <view class='hold-text'>
+    <span class="detail">超级VIP畅享</span>
+    <span class="megaText">50+</span>
+    <span class="detail2">项特权，立省</span>
+    <span class="megaText">2000+</span>
+    <span class="detail2">元/年</span>
+  </view>
+
+  <!-- wxml文件 -->
+  <scroll-view class="container3">
+    <view wx:for="{{imageList}}" wx:key="index" class="list-item">
+      <image class="image" src="{{item.leftImage}}" mode=""></image>
+      <image class="image" src="{{item.rightImage}}" mode=""></image>
+    </view>
+  </scroll-view>
+
+  <!-- <view class='list'>
+    <view class="list-item" style="display: flex;">
+      <image class='list-image' style="height:400rpx;" src="../images/数字专辑.png" mode="aspectFit" />
+      <image class='list-image' style="height:400rpx;" src="../images/豪华vip.png" mode="aspectFit" />
+    </view>
+
+    <view class="list" style="display: flex;">
+      <image style="height:400rpx;" src="../images/智能设备VIP.png" mode="aspectFit" />
+      <image style="height:400rpx;" src="../images/直通三大app.png" mode="aspectFit" />
+    </view>
+
+    <view class="list" style="display: flex;">
+      <image style="height:400rpx;" src="../images/蟒蛇全景音.png" mode="aspectFit" />
+      <image src="../images//" mode="aspectFit" />
+    </view>
+  </view> -->
+
+
+
+
+</view>

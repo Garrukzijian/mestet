@@ -1,0 +1,92 @@
+<!--pages/applet/applet.wxml-->
+<view class="content">
+  <text class="head">热门推荐</text>
+  <view class="headerPart">
+    <view class="imageBox backgrondFirst">
+      <image src="../images/精灵副本.png" class="imageLogo" mode="widthFix"/>
+      <text class="imageTitle">音乐精灵 </text>
+      <text class="useNumber">10W人用过</text>
+      <view class="btnOpen" bindtap="tapToast">打开</view> 
+    </view>
+    <view class="imageBox backgrondSecond">
+      <image src="../images/睡眠专区副本.png" class="imageLogo" mode="widthFix"/>
+      <text class="imageTitle">华为手表 </text>
+      <text class="useNumber">10W人用过</text>
+      <view class="btnOpen" bindtap="tapToast">打开</view>
+    </view>
+    <view class="imageBox backgrondThird">
+      <image src="../images/手表副本.png" class="imageLogo" mode="widthFix"/>
+      <text class="imageTitle">睡眠专区</text>
+      <text class="useNumber">10W人用过</text>
+      <view class="btnOpen" bindtap="tapToast">打开</view>
+    </view>
+
+  </view>
+  
+  <view class="content1">
+    <text class="head1">创新应用</text>
+
+
+<view class="imageBox backgrondFour">
+<image src="../images/节奏滑板副本.png" class="imagePhoto" mode=""/>
+<text class="aa">节奏滑板</text>
+<text class="bb">94.2w人用过</text>
+<view class="btnOpen1" bindtap="tapToast">打开</view>
+
+</view>
+
+
+
+<view class="imageBox backgrondFire">
+<image src="../images/云滑板副本.png" class="imagePhoto1" mode=""/>
+<text class="aa1">云播放</text>
+<text class="bb2">12.9w人用过</text>
+<view class="btnOpen2" bindtap="tapToast">打开</view>
+</view> 
+
+
+
+<view class="imageBox backgrondSix">
+<image src="../images/晚安频道副本.png" class="imagePhoto2" mode=""/>
+<text class="aa2">晚安频道</text>
+<text class="bb3">15.52w人用过</text>
+<view class="btnOpen3" bindtap="tapToast">打开</view>
+
+</view>
+
+
+<view class="imageBox backgrondSeven">
+<image src="../images/我的唱片机.png" class="imagePhoto3" mode=""/>
+<text class="aa3">我的唱片机</text>
+<text class="bb4">1.5w人用过</text>
+<view class="btnOpen4" bindtap="tapToast">打开</view>
+
+</view> 
+
+
+<view class="imageBox backgrondEight">
+  <image src="../images/音乐主题副本.png" class="imagePhoto4" mode=""/>
+<text class="aa4">音乐主题</text>
+<text class="bb5">6.0w人用过</text>
+<view class="btnOpen5" bindtap="tapToast">打开</view>
+
+</view>
+
+
+<view class="imageBox backgrondNine">
+<image src="../images/放松空间副本.png" class="imagePhoto5" mode=""/>
+<text class="aa5">放松空间</text>
+<text class="bb6">2.8w人用过</text>
+<view class="btnOpen6" bindtap="tapToast">打开</view>
+
+</view> 
+
+
+  </view>
+ 
+
+</view>
+
+
+
+

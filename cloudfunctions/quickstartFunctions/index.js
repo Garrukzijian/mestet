@@ -4,7 +4,9 @@ const createCollection = require('./createCollection/index');
 const selectRecord = require('./selectRecord/index');
 const updateRecord = require('./updateRecord/index');
 const sumRecord = require('./sumRecord/index');
-
+const getUserInfo = require('./getUserInfo/index')
+const setUserInfo = require('./setUserInfo/index')
+const startvip = require('./startvip/index')
 
 // 云函数入口函数
 exports.main = async (event, context) => {
@@ -21,5 +23,11 @@ exports.main = async (event, context) => {
       return await updateRecord.main(event, context);
     case 'sumRecord':
       return await sumRecord.main(event, context);
+    case 'getUserInfo':
+      return await getUserInfo.main(event, context);
+    case 'setUserInfo':
+      return await setUserInfo.main(event, context);
+    case 'startvip':
+      return await startvip.main(event, context)
   }
 };

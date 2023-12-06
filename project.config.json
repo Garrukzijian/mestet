@@ -42,31 +42,19 @@
     "disableUseStrict": false,
     "showES6CompileOption": false,
     "useCompilerPlugins": false,
-    "minifyWXML": true
+    "minifyWXML": true,
+    "ignoreUploadUnusedFiles": true
   },
-  "appid": "wxfa9d4b6c8a2d6bf0",
   "projectname": "quickstart-wx-cloud",
   "libVersion": "2.14.1",
   "cloudfunctionTemplateRoot": "cloudfunctionTemplate/",
   "condition": {
-    "search": {
-      "list": []
-    },
-    "conversation": {
-      "list": []
-    },
-    "plugin": {
-      "list": []
-    },
-    "game": {
-      "list": []
-    },
     "miniprogram": {
       "list": [
         {
-          "id": -1,
           "name": "db guide",
-          "pathName": "pages/databaseGuide/databaseGuide"
+          "pathName": "pages/databaseGuide/databaseGuide",
+          "query": ""
         }
       ]
     }
@@ -80,5 +68,6 @@
   "editorSetting": {
     "tabIndent": "insertSpaces",
     "tabSize": 2
-  }
+  },
+  "appid": "wxc17c0e9701eb149d"
 }

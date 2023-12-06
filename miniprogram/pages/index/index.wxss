@@ -291,7 +291,7 @@ page {
   border-radius: 60rpx;
   margin-bottom:  90rpx;
   margin-top: 120rpx;
-  margin-left: -50rpx;
+  margin-left: -63rpx;
 }
 .one{
 font-size: large;
@@ -299,5 +299,7 @@ font-style: italic;
 color: rgb(163, 27, 27);
 padding-left: 150rpx;
 margin-top: 100rpx;
-
+}
+.vip{
+  color: red;
 }
